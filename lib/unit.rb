@@ -9,5 +9,8 @@ class Unit
    def damage(damage_points)
     @health_points -= damage_points
   end
-  
+
+  def attack!(enemy)
+    enemy.damage(attack_power)
+  end
 end

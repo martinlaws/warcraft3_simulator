@@ -9,8 +9,4 @@ attr_reader :attack_power
     @health_points = 60
     @attack_power = 10
   end
-
-  def attack!(enemy)
-    enemy.damage(attack_power)
-  end
 end

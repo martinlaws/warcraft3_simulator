@@ -1,3 +1,7 @@
+require_relative('./footman.rb')
+require_relative('./unit.rb')
+require_relative('./peasant.rb')
+
 class Barracks
 attr_accessor :gold, :food
 
@@ -21,4 +25,21 @@ attr_accessor :gold, :food
       Footman.new
     end
   end
+
+  def can_train_peasant?
+    if (gold >= 90) && (food >= 5)
+      true
+    else
+      false
+    end
+  end
+
+  def train_peasant
+    if can_train_peasant?
+      @gold -= 90
+      @food -= 5
+      Peasant.new
+    end
+  end
+
 end
