@@ -7,12 +7,18 @@ attr_accessor :gold, :food
   end
 
   def can_train_footman?
-    true
+    if (gold >= 135) && (food >= 2)
+      true
+    else
+      false
+    end
   end
 
   def train_footman
-    @gold -= 135
-    @food -= 2
-    Footman.new
+    if can_train_footman?
+      @gold -= 135
+      @food -= 2
+      Footman.new
+    end
   end
 end
