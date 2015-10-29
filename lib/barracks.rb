@@ -14,7 +14,7 @@ attr_accessor :gold, :food, :health_points, :lumber
   end
 
   def can_train_footman?
-    if (@gold >= 135) && (@food >= 2)
+    if (gold >= 135) && (food >= 2)
       true
     else
       false
@@ -30,7 +30,7 @@ attr_accessor :gold, :food, :health_points, :lumber
   end
 
   def can_train_peasant?
-    if (@gold >= 90) && (@food >= 5)
+    if (gold >= 90) && (food >= 5)
       true
     else
       false
@@ -46,7 +46,7 @@ attr_accessor :gold, :food, :health_points, :lumber
   end
 
   def can_train_siege_engine?
-    if (@gold >= 200) && (@lumber >= 60) && (food >= 3)
+    if (gold >= 200) && (lumber >= 60) && (food >= 3)
       true
     else
       false

@@ -1,8 +1,6 @@
 require_relative('./unit.rb')
 
 class SiegeEngine < Unit
-  attr_accessor :health_points
-  attr_reader   :attack_power
 
   def initialize
     @health_points = 400

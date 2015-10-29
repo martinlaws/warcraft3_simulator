@@ -11,8 +11,10 @@ class Unit
   end
 
   def attack!(enemy)
-    if !dead?
+    if !dead? && (enemy != Barracks)
       enemy.damage(attack_power)
+    elsif !dead?
+      attack_building!(enemy)
     else
       false
     end
@@ -23,8 +25,10 @@ class Unit
   end
 
   def dead?
-    if @health_points >= 0
+    if @health_points <= 0
       true
+    else
+      false
     end
   end
 end
